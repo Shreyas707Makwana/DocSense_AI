@@ -87,18 +87,18 @@ Sometimes LIVE LINK will be inactive as on RENDER the Backend Deployment instanc
 ## 🏗️ **Architecture Overview**
 
 ```
-┌─────────────────┐ ┌─────────────────┐ ┌─────────────────┐
-│   Frontend      │ │    Backend      │ │   Supabase      │
+┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
+│   Frontend      │    │    Backend      │    │   Supabase      │
 │  (Next.js 15)   │◄──►│   (FastAPI)     │◄──►│  (Auth + DB)    │
-│    Vercel       │ │    Render       │ │  (pgvector)     │
-└─────────────────┘ └─────────────────┘ └─────────────────┘
+│    Vercel       │    │    Render       │    │  (pgvector)     │
+└─────────────────┘    └─────────────────┘    └─────────────────┘
                                │
                                ▼
-                    ┌─────────────────┐
-                    │  Hugging Face   │
-                    │     Router      │
-                    │ (Llama-3.1-8B)  │
-                    └─────────────────┘
+                      ┌─────────────────┐
+                      │  Hugging Face   │
+                      │     Router      │
+                      │ (Llama-3.1-8B)  │
+                      └─────────────────┘
 ```
 
 ### **Data Flow**
